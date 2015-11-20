@@ -322,7 +322,7 @@
   border-radius: 5px;
   box-shadow: 1px 2px 3px -2px #222; }
   /* line 23, /Users/michelson/Documents/rubyonrails/medium-editor/app/assets/stylesheets/dante/_menu.scss */
-  .dante-menu:after, .dante-menu:before {
+  .dante-menu-after, .dante-menu-before {
     content: "";
     height: 0;
     width: 0;
@@ -332,11 +332,11 @@
     border: 8px solid transparent;
     margin-left: -4px; }
   /* line 34, /Users/michelson/Documents/rubyonrails/medium-editor/app/assets/stylesheets/dante/_menu.scss */
-  .dante-menu:after {
+  .dante-menu-after {
     border-top-color: #333;
     bottom: -15px; }
   /* line 38, /Users/michelson/Documents/rubyonrails/medium-editor/app/assets/stylesheets/dante/_menu.scss */
-  .dante-menu:before {
+  .dante-menu-before {
     border-top-color: #262626;
     bottom: -16px; }
 

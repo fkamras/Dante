@@ -854,11 +854,15 @@
     };
 
     Editor.prototype.relocateMenu = function(position) {
-      var height, left, padd, top;
+      var height, realLeft, left, padd, top;
       height = this.editor_menu.$el.outerHeight();
       padd = this.editor_menu.$el.width() / 2;
       top = position.top + $(window).scrollTop() - height;
-      left = position.left + (position.width / 2) - padd;
+      realLeft = position.left + (position.width / 2) - padd;
+      left = Math.max(realLeft, 0);
+      this.editor_menu.$el.find('.dante-menu-before, .dante-menu-after').css({
+        marginLeft: Math.min(realLeft, 0)
+      });
       return this.editor_menu.$el.offset({
         left: left,
         top: top
@@ -2652,15 +2656,14 @@
         buttons: ['bold', 'italic', 'h2', 'h3', 'h4', 'blockquote', 'createlink']
       };
     };
-
     Menu.prototype.template = function() {
       var html;
       html = "<div class='dante-menu-linkinput'><input class='dante-menu-input' placeholder='http://'><div class='dante-menu-button'>x</div></div>";
-      html += "<ul class='dante-menu-buttons'>";
+      html += "<span class='dante-menu-before'></span><ul class='dante-menu-buttons'>";
       _.each(this.config.buttons, function(item) {
         return html += "<li class='dante-menu-button'><i class=\"dante-icon icon-" + item + "\" data-action=\"" + item + "\"></i></li>";
       });
-      html += "</ul>";
+      html += "</ul><span class='dante-menu-after'></span>";
       return html;
     };
 
