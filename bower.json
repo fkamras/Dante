@@ -20,7 +20,7 @@
   "main": [
     "app/assets/**/*",
     "dist/**/*",
-    "vendor/Sanitize.js/lib/sanitize.js"
+    "vendor/Sanitize/lib/*"
   ],
   "ignore": [
     ".gitignore",
