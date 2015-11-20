@@ -19,7 +19,8 @@
   ],
   "main": [
     "app/assets/**/*",
-    "dist/**/*"
+    "dist/**/*",
+    "vendor/Sanitize.js/lib/sanitize.js"
   ],
   "ignore": [
     ".gitignore",
@@ -38,7 +39,6 @@
   ],
   "dependencies": {
     "jquery": "*",
-    "underscore" : "*",
-    "sanitize.js" : "*"
+    "lodash" : "*"
   }
 }
