@@ -201,7 +201,7 @@
 /* line 2, /Users/michelson/Documents/rubyonrails/medium-editor/app/assets/stylesheets/dante/_icons.scss */
 .dante-icon:before {
   display: inline-block;
-  font-family: "dante";
+  font-family: "dante" !important;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -278,7 +278,7 @@
 
 /* line 39, /Users/michelson/Documents/rubyonrails/medium-editor/app/assets/stylesheets/dante/_icons.scss */
 .tooltip-icon:before {
-  font-family: 'dante-tooltip';
+  font-family: 'dante-tooltip' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
