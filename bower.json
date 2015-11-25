@@ -18,7 +18,6 @@
     { "name": "Cristian Ferrari", "homepage": "https://github.com/cristianferrarig" }
   ],
   "main": [
-    "app/assets/**/*",
     "dist/**/*",
     "vendor/sanitize/*"
   ],
