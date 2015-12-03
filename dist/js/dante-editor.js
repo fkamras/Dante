@@ -2126,6 +2126,7 @@
       return $.ajax({
         type: "post",
         url: this.current_editor.upload_url,
+        headers: this.current_editor.upload_headers, 
         xhr: (function(_this) {
           return function() {
             var xhr;
