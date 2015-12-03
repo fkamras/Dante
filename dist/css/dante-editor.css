@@ -974,7 +974,6 @@ p[data-align="center"],
   content: "";
   margin-bottom: 10px; }
 
-@media (max-width: 1200px) {
   /* line 29, /Users/michelson/Documents/rubyonrails/medium-editor/app/assets/stylesheets/dante/_caption.scss */
   .imageCaption,
   .postField--outsetCenterImage > .imageCaption {
@@ -986,7 +985,8 @@ p[data-align="center"],
 
   /* line 37, /Users/michelson/Documents/rubyonrails/medium-editor/app/assets/stylesheets/dante/_caption.scss */
   .imageCaption:before {
-    display: none; } }
+    display: none; }
+    
 /* line 42, /Users/michelson/Documents/rubyonrails/medium-editor/app/assets/stylesheets/dante/_caption.scss */
 figure.is-defaultValue .imageCaption,
 .graf--sectionCaption.is-defaultValue {
