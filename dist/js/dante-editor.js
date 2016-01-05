@@ -2422,7 +2422,8 @@
       _.each(this.widgets, function(b) {
         var data_action_value;
         data_action_value = b.action_value ? "data-action-value='" + b.action_value + "'" : "";
-        return menu += "<button class='inlineTooltip-button scale' title='" + b.title + "' data-action='inline-menu-" + b.action + "' " + data_action_value + "> <span class='tooltip-icon " + b.icon + "'></span> </button>";
+        var uploadForm = b.action === 'menu-image' ? '<input type="file">' : '';
+        return menu += "<button class='inlineTooltip-button scale' title='" + b.title + "' data-action='inline-menu-" + b.action + "' " + data_action_value + "> " + uploadForm + " <span class='tooltip-icon " + b.icon + "'></span> </button>";
       });
       return "<button class='inlineTooltip-button control' title='Close Menu' data-action='inline-menu'> <span class='tooltip-icon icon-plus'></span> </button> <div class='inlineTooltip-menu'> " + menu + " </div>";
     };
@@ -2655,7 +2656,7 @@
             'indent', 'outdent', 'bold', 'italic', 'underline', 'createlink'
           ]
          */
-        buttons: ['bold', 'italic', 'h2', 'h3', 'h4', 'blockquote', 'createlink']
+        buttons: ['bold', 'italic', 'underline', 'h2', 'h3', 'h4', 'blockquote', 'insertorderedlist', 'insertunorderedlist', 'inserthorizontalrule', 'createlink']
       };
     };
     Menu.prototype.template = function() {
